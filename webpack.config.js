@@ -3,6 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: path.join(__dirname, "js", "app.js"),
+    devtool: 'sourcemaps',
     module: {
         rules: [
           {
@@ -23,7 +24,7 @@ module.exports = {
         publicPath: "/"
     }, 
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        //new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
         hot: true,
